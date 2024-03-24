@@ -165,6 +165,7 @@ fun ShoppingListApp() {
 }
 
 @Composable
+//function for changing the data stored
 fun shoppinglisteditor(item:ShoppingItem,onEditComplete:(String,Int)->Unit){
     var editedname by remember { mutableStateOf(item.name) }
     var editedquanity by remember{ mutableStateOf(item.quantity.toString()) }
@@ -206,6 +207,7 @@ fun shoppinglisteditor(item:ShoppingItem,onEditComplete:(String,Int)->Unit){
 
 
 @Composable
+//function to perform task by button . basically made  edit and delete pop up button
 fun Shoppinglistitem(
     item:ShoppingItem,
     onEditClick:() ->Unit,
